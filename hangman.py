@@ -1,9 +1,7 @@
 # Hangman Game
 # -----------------------------------
 # Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
+
 import random
 import string
 import re
@@ -42,8 +40,7 @@ def choose_word(wordlist):
 
 # -----------------------------------
 
-# Load the list of words into the variable wordlist
-# so that it can be accessed from anywhere in the program
+# Load the list of words into the variable wordlist to access from anywhere in the prograam
 wordlist = load_words()
 
 
@@ -56,7 +53,7 @@ def is_word_guessed(secret_word, letters_guessed):
     returns: boolean, True if all the letters of secret_word are in letters_guessed;
       False otherwise
     """
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
+   
     if all(letter in letters_guessed for letter in secret_word):
         return True
     else:
@@ -70,7 +67,7 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters, underscores (_), and spaces that represents
       which letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE AND DELETE "pass"
+  
     secret_word_copy = secret_word
     for letter in secret_word_copy:
         if letter not in letters_guessed:
@@ -105,19 +102,18 @@ def hangman(secret_word):
       
     * The user should start with 6 guesses
 
-    * Before each round, you should display to the user how many guesses
+    * Before each round, it displays the user how many guesses
       s/he has left and the letters that the user has not yet guessed.
     
-    * Ask the user to supply one guess per round. Remember to make
-      sure that the user puts in a letter!
+    * Asks the user to supply one guess per round. Only letters are valid input.
+      User gets a warning if it's a number/special-character.
     
-    * The user should receive feedback immediately after each guess 
+    * User receives a feedback immediately after each guess 
       about whether their guess appears in the computer's word.
 
-    * After each guess, you should display to the user the 
-      partially guessed word so far.
+    * After each guess, the user is displayed partially guessed word so far.
     
-    Follows the other limitations detailed in the problem write-up.
+    
     '''
     current_state = len(secret_word) * [" _ "]
     result = ' '.join(current_state)
@@ -181,13 +177,7 @@ def hangman(secret_word):
             print(f'you lose. The word is {secret_word}')
             break
 
-
-# When you've completed your hangman function, scroll down to the bottom
-# of the file and uncomment the first two lines to test
-# (hint: you might want to pick your own
-# secret_word while you're doing your own testing)
-
-
+        
 # -----------------------------------
 
 
@@ -231,17 +221,11 @@ def show_possible_matches(my_word):
 
     '''
 
-# When you've completed your hangman_with_hint function, comment the two similar
-# lines above that were used to run the hangman function, and then uncomment
-# these two lines and run this file to test!
-# Hint: You might want to pick your own secret_word while you're testing.
 
 
 if __name__ == "__main__":
     # pass
 
-    # To test part 2, comment out the pass line above and
-    # uncomment the following two lines.
 
     secret_word = choose_word(wordlist)
     hangman(secret_word)
