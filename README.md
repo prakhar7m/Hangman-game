@@ -34,7 +34,7 @@ hangman.py
 11. **How to get hints**: user can guess an asterisk (*), in which case the computer will print out all the words that match that guess.
 
 ## Contributing
-The implementation of game is complete. However, I have made an attempt to convert it to a Flask app and deploy it to Heroku, but it's kinda buggy. If you would like to contribute to this project for the web implementation, you can fork the repository, make your changes, and submit a pull request. Any contributions are welcome, including bug fixes, new features, or improvements to the existing code.
+The implementation of game is complete. However, I have made an attempt to convert it to a [Flask app](https://github.com/prakhar7m/hangman) and deploy it to Heroku, but it's kinda buggy. If you would like to contribute to this project for the web implementation, you can fork the repository, make your changes, and submit a pull request. Any contributions are welcome, including bug fixes, new features, or improvements to the existing code.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE
