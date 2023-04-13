@@ -15,7 +15,7 @@ To install and run the game, you can follow these steps:
 3. Run the following command to start the game:
 
 ```python
-hangman.py
+python3 hangman.py
 ```
 4. The game will start, and you can begin playing by following the instructions on the screen.
 
